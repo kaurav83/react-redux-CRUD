@@ -1,0 +1,32 @@
+.todo-form {
+    padding: 2rem 0;
+    display: flex;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+.block-field {
+    width: 30rem;
+    /* margin-right: auto; */
+    /* text-align: left; */
+    margin-right: auto;
+    margin-left: 2rem;
+}
+
+.field {
+    padding: .5rem 0.5rem;
+    width: 100%;
+}
+
+.add-note {
+    background: darkviolet;
+    color: white;
+    border: none;
+    padding: .5rem 0.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: 2rem;
+}

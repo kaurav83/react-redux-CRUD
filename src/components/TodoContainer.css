@@ -1,0 +1,12 @@
+.todo-container {
+    max-width: 45rem;
+    margin: 2rem auto; 
+    border: .0625rem solid #bbb;
+}
+
+.title {
+    font-size: 1.3rem;
+    background: indigo;
+    color: yellow;
+    padding: .5rem 0;
+}
