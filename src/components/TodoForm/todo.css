@@ -1,0 +1,29 @@
+.todo-item {
+    border-top: .0625rem solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.todo-text {
+    display: inline-block;
+    padding: .5rem 0;
+    margin-left: 2rem;
+}
+.todo-buttons {
+    margin-right: 2rem;
+}
+.pencil {
+    margin-right: .5rem;
+}
+
+.edit-field {
+    padding: .5rem;
+    width: 100%;
+}
+.btn-save {
+    /* background: red; */
+}
+
+form {
+    /* padding: .5rem 0; */
+}

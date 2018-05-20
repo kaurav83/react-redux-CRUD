@@ -1,4 +1,5 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import './todo.css';
 
 class Todo extends Component {
     constructor(props) {
@@ -8,7 +9,7 @@ class Todo extends Component {
             editing: false
         }
     }
-    
+
 
     componentDidUpdate(prevProps, prevState) {
         if (this.state.editing) {
@@ -20,13 +21,13 @@ class Todo extends Component {
         event.preventDefault();
 
         const textField = this.refs.text.value;
-        
+
         this.props.onEdit(this.props.id, textField);
-        this.setState({editing: false});
+        this.setState({ editing: false });
     }
 
     handleEdit = () => {
-        this.setState({editing: true});
+        this.setState({ editing: true });
     }
 
     handleDelete = () => {
@@ -37,14 +38,17 @@ class Todo extends Component {
         return (
             <div className="todo-item">
                 <span className="todo-text">{this.props.text}</span>
-                <i 
-                    className="fas fa-pencil-alt"
-                    onClick={this.handleEdit}
-                ></i>
-                <i 
-                    className="fas fa-trash-alt"
-                    onClick={this.handleDelete}
-                ></i>
+                <div className="todo-buttons">
+                    <i
+                        className="pencil fas fa-pencil-alt"
+                        onClick={this.handleEdit}
+                    ></i>
+                    <i
+                        className="fas fa-trash-alt"
+                        onClick={this.handleDelete}
+                    ></i>
+                </div>
+
             </div>
         )
     }
@@ -52,8 +56,8 @@ class Todo extends Component {
     renderForm = () => {
         return (
             <form onSubmit={this.handleSubmit}>
-                <input type="text" ref="text" defaultValue={this.props.text} />
-                <button type="submit"><i className="fas fa-save"></i></button>
+                <input className="edit-field" type="text" ref="text" defaultValue={this.props.text} />
+                <button className="btn-save" type="submit"><i className="fas fa-save"></i></button>
             </form>
         )
     }
